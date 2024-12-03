@@ -15,7 +15,7 @@ const HeroSection = () => {
                                     <h2 className="text-gray-600 text-sm tracking-wider mb-4">WELCOME TO MY WORLD</h2>
                                     <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4">
                                         Hi, I'm{" "}
-                                        <span className="text-pink-500">S D'cruz</span>
+                                        <span className="text-primary">S D'cruz</span>
                                     </h1>
                                     <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold">
                                         a <span className="text-gray-800">Professional Coder.</span>
@@ -79,7 +79,7 @@ const HeroSection = () => {
 
                 {/* Side Text */}
                 <div className="fixed right-0 top-1/2 -translate-y-1/2 hidden lg:block">
-                    <div className="vertical-text transform rotate-90 text-pink-500 tracking-widest text-sm">
+                    <div className="vertical-text transform rotate-90 text-primary tracking-widest text-sm">
                         DEMOS
                     </div>
                 </div>

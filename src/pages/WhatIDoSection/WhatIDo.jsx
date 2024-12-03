@@ -28,7 +28,7 @@ const WhatIDo = () => {
           description: "Mobile Marketing capabilities included social media marketing, community media etc.",
         },
         {
-          icon: "⚙",
+          icon: "▢",
           title: "Personal Portfolio April",
           description: "A web application is a software 250,000 users, customers as to capable of to model services.",
         },
@@ -70,16 +70,17 @@ const WhatIDo = () => {
       return (
         <div className="min-h-screen bg-gray-50 p-4 md:p-8">
           <section className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12">What I Do</h2>
+           <h4 className="font-[400] text-sm uppercase text-primary">Features</h4>
+            <h2 className="text-[60px] font-bold leading-[1.2] text-[#3c3e41] mt-[15px] mb-0">What I Do</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+                  className="bg-transparent h-240px] w-[409px] p-6 rounded-lg primarysShadow transition-shadow duration-300"
                 >
-                  <div className="text-3xl mb-4 text-red-500">{service.icon}</div>
-                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-gray-600 text-sm">{service.description}</p>
+                  <div className="text-[35px] text-primary">{service.icon}</div>
+                  <h3 className="text-xl font-semibold my-4">{service.title}</h3>
+                  <p className="text-gray-600 text-base leading-7 mb-[20px] transition">{service.description}</p>
                 </div>
               ))}
             </div>
@@ -87,10 +88,10 @@ const WhatIDo = () => {
     
           <section className="max-w-7xl mx-auto mt-20">
             <div className="text-center mb-12">
-              <p className="text-red-500 text-sm uppercase tracking-wider mb-2">
+              <p className="text-primary text-sm uppercase tracking-wider mb-2">
                 VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK
               </p>
-              <h2 className="text-3xl font-bold">My Portfolio</h2>
+            <h2 className="text-[60px] font-bold leading-[1.2] text-[#3c3e41] mt-[15px] mb-0">My Portfolio</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {portfolio.map((item, index) => (
@@ -106,8 +107,8 @@ const WhatIDo = () => {
                     />
                   </div>
                   <div className="p-4">
-                    <span className="text-red-500 text-sm">{item.category}</span>
-                    <h3 className="font-semibold mt-1 group-hover:text-red-500 transition-colors duration-300">
+                    <span className="text-primary text-sm">{item.category}</span>
+                    <h3 className="font-semibold mt-1 group-hover:text-primary-500 transition-colors duration-300">
                       {item.title}
                     </h3>
                   </div>

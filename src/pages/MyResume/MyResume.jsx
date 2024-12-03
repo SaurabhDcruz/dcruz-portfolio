@@ -70,7 +70,7 @@ const MyResume = () => {
         <div className="min-h-screen bg-gray-50 p-4 md:p-8">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-12">
-                    <p className="text-red-500 text-sm uppercase tracking-wider mb-2">
+                    <p className="text-primary text-sm uppercase tracking-wider mb-2">
                         7+ YEARS OF EXPERIENCE
                     </p>
                     <h2 className="text-4xl font-bold text-gray-800">My Resume</h2>
@@ -84,8 +84,8 @@ const MyResume = () => {
                             onClick={() => setActiveTab(tab.id)}
                             className={`px-8 py-4 text-sm font-medium transition-colors duration-300 rounded-full
                   ${activeTab === tab.id
-                                    ? 'bg-red-500 text-white'
-                                    : 'bg-white text-gray-600 hover:bg-red-500 hover:text-white'
+                                    ? 'bg-primary text-white'
+                                    : 'bg-white text-gray-600 hover:bg-primary hover:text-white'
                                 }`}
                         >
                             {tab.label}
@@ -98,10 +98,10 @@ const MyResume = () => {
                     {steps.map((step, index) => (
                         <div
                             key={index}
-                            className="bg-white p-6 rounded-lg shadow-sm hover:bg-red-500 hover:text-white transition-all duration-300 group"
+                            className="bg-white p-6 rounded-lg shadow-sm hover:bg-primary hover:text-white transition-all duration-300 group"
                         >
                             <div className="flex items-center mb-4">
-                                <span className="text-3xl font-bold mr-2 text-red-500 group-hover:text-white">{step.number}</span>
+                                <span className="text-3xl font-bold mr-2 text-primary group-hover:text-white">{step.number}</span>
                                 <h3 className="text-xl font-semibold">{step.title}</h3>
                             </div>
                             <p className="text-sm text-gray-600 group-hover:text-white/90">{step.description}</p>
@@ -138,7 +138,7 @@ const MyResume = () => {
                                                             <h3 className="text-xl font-semibold">{item.title}</h3>
                                                             <p className="text-sm text-gray-600 mt-1">{item.institution}</p>
                                                         </div>
-                                                        <span className="text-red-500 text-sm">{item.rating}</span>
+                                                        <span className="text-primary text-sm">{item.rating}</span>
                                                     </div>
                                                     <p className="text-gray-600 text-sm leading-relaxed">
                                                         {item.description}
@@ -179,7 +179,7 @@ const MyResume = () => {
                                                             <h3 className="text-xl font-semibold">{item.title}</h3>
                                                             <p className="text-sm text-gray-600 mt-1">{item.institution}</p>
                                                         </div>
-                                                        <span className="text-red-500 text-sm">{item.rating}</span>
+                                                        <span className="text-primary text-sm">{item.rating}</span>
                                                     </div>
                                                     <p className="text-gray-600 text-sm leading-relaxed">
                                                         {item.description}

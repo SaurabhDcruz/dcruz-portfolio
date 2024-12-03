@@ -44,12 +44,12 @@ const Layout = () => {
                                     <a
                                         key={item}
                                         href={`#${item.toLowerCase()}`}
-                                        className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-pink-500 transition-colors"
+                                        className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors"
                                     >
                                         {item}
                                     </a>
                                 ))}
-                                <button className="bg-pink-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-pink-600 transition-colors shadow-md">
+                                <button className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary transition-colors shadow-md">
                                     BUY NOW
                                 </button>
                             </div>

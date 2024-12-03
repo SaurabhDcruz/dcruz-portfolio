@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "var(--primary)", // Custom primary color
-        secondary: 'var(--secondary)', // Custom secondary color
+        primary: "#ff4500", // Custom primary color
+        secondary: '', // Custom secondary color
         // You can add more custom colors here
       },
       screens: {

@@ -1,12 +1,12 @@
 export const THEMES = {
     light: {
-      "--primary": "#a72222", // This Variable use for Theme Configuraiton primary color
+      "--primary": "#ff4500", // This Variable use for Theme Configuraiton primary color
       
     },
             
   
     dark: {
-      "--primary": "#73c2cb",
+      "--primary": "#ff4500",
       
     },
   };
