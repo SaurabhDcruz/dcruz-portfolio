@@ -72,9 +72,9 @@ const WhatIDo = () => {
     return (
         <div className="min-h-screen bg-gray-50 p-4 md:p-8">
             <section className="max-w-7xl mx-auto">
-                <h4 className="font-[400] text-sm uppercase text-primary hover:text-[--color-check] tracking-widest">Features</h4>
+                <h4 className="font-[400] text-sm uppercase text-primary hover:text-[--color-check] letterWordSpacing">Features</h4>
                 <h2 className="text-[60px] font-bold leading-[1.2] text-[#3c3e41] mt-7 mb-11 mb">What I Do</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 ">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
                     {services.map((service, index) => (
                         <div className='group'>
                             <div
@@ -93,33 +93,35 @@ const WhatIDo = () => {
 
             <section className="max-w-7xl mx-auto mt-20">
                 <div className="text-center mb-12">
-                    <p className="text-primary text-sm uppercase tracking-wider mb-2">
+                    <p className="text-primary text-sm uppercase mb-2 letterWordSpacing">
                         VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK
                     </p>
                     <h2 className="text-[60px] font-bold leading-[1.2] text-[#3c3e41] mt-[15px] mb-0">My Portfolio</h2>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {portfolio.map((item, index) => (
-                        <div
-                            key={index}
-                            className="group relative bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
-                        >
-                            <div className="aspect-w-16 aspect-h-9">
-                                <img
-                                    src={item.image}
-                                    alt={item.title}
-                                    className="object-cover w-full h-full"
-                                />
-                            </div>
-                            <div className="p-4">
-                                <span className="text-primary text-sm">{item.category}</span>
-                                <h3 className="font-semibold mt-1 group-hover:text-primary-500 transition-colors duration-300">
-                                    {item.title}
-                                </h3>
-                            </div>
-                        </div>
-                    ))}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    {portfolio.map((item, index) => (
+        <div
+            key={index}
+            className="group relative bg-gradient-box-w rounded-lg overflow-hidden shadow-white-3 transition-shadow duration-300"
+        >   
+            <div className='px-5 pt-5'>
+                <div className="aspect-w-16 aspect-h-9 overflow-hidden rounded-md">
+                    <img
+                        src={item.image}
+                        alt={item.title}
+                        className="object-cover w-full h-full transition-transform duration-300 transform group-hover:scale-110"
+                    />
                 </div>
+            </div>
+            <div className="p-4">
+                <span className="text-primary text-sm">{item.category}</span>
+                <h3 className="font-semibold mt-1 group-hover:text-primary-500 transition-colors duration-300">
+                    {item.title}
+                </h3>
+            </div>
+        </div>
+    ))}
+</div>
             </section>
         </div>
     )
