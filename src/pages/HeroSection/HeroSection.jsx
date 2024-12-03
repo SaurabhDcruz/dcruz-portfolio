@@ -71,7 +71,7 @@ const HeroSection = () => {
                             <img
                                 src="https://static.vecteezy.com/system/resources/previews/024/095/208/large_2x/happy-young-man-smiling-free-png.png"
                                 alt="Professional portrait"
-                                className="absolute inset-0 w-full h-full object-fit rounded-2xl primarysShadow"
+                                className="absolute inset-0 w-full h-full object-fit rounded-2xl shadow-white-3"
                             />
                         </div>
                     </div>
