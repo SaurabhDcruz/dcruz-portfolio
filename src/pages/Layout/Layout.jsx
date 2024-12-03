@@ -3,6 +3,17 @@ import { X, Menu, Facebook, Instagram, Linkedin } from 'lucide-react'
 
 const Layout = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const navItems = [
+    'HOME',
+    'FEATURES',
+    'PORTFOLIO',
+    'RESUME',
+    'CLIENTS',
+    'PRICING',
+    'BLOG',
+    'CONTACT',
+  ]
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Navigation */}
