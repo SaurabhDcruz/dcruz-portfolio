@@ -3,6 +3,7 @@ import { X, Menu, Facebook, Instagram, Linkedin } from 'lucide-react'
 import HeroSection from '../HeroSection/HeroSection'
 import WhatIDo from '../WhatIDoSection/WhatIDo'
 import MyResume from '../MyResume/MyResume'
+import ClientShowcase from '../ClientShowcase/ClientShowcase'
 
 const Layout = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -155,6 +156,9 @@ const Layout = () => {
 
             {/* My Resume */}
             <MyResume />
+
+            {/* ClientShowcase  */}
+            <ClientShowcase/>
         </div>
     )
 }
