@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Steps from '../../Components/Steps/Steps'
+import ProfessionalSkill from './ProfessionalSkills/ProfessionalSkill'
 
 const MyResume = () => {
   const [activeTab, setActiveTab] = useState('education')
@@ -174,36 +175,7 @@ const MyResume = () => {
               }`}
             >
               {/* Content 2 */}
-              <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-                {/* Design Skill */}
-                <div className='space-6'>
-                  <div className='md:px-5 xs:px-0 xs:pr-[10px]'>
-                    <h3 className='text-2xl font-bold'>Design Skill</h3>
-                    <div className='max-w-3xl mx-auto'>
-                      <div className='mb-8'>
-                        <span className='text-gray-600'>
-                          {educationData[0].period}
-                        </span>
-                      </div>
-                      <Steps data={educationData} />
-                    </div>
-                  </div>
-                </div>
-                {/* Development Skill */}
-                <div className='space-6'>
-                  <div className='md:px-5 xs:px-0 xs:pr-[10px]'>
-                    <h3 className='text-2xl font-bold'>Development Skill</h3>
-                    <div className='max-w-3xl mx-auto'>
-                      <div className='mb-8'>
-                        <span className='text-gray-600'>
-                          {educationData[0].period}
-                        </span>
-                      </div>
-                      <Steps data={educationData} />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <ProfessionalSkill />
             </div>
 
             <div
@@ -287,21 +259,25 @@ const MyResume = () => {
             </div>
           </div>
           <div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 '>
               {steps.map((step, index) => (
                 <div
                   key={index}
-                  className='bg-white p-6 rounded-lg shadow-sm hover:bg-primary hover:text-white transition-all duration-300 group'
+                  className='bg-white p-6 rounded-lg shadow-white-3 bg-gradient-box-w hover:bg-gradient-box-primary hover:text-white group transition-all duration-300 ease-in-out'
                 >
-                  <div className='flex items-center mb-4'>
-                    <span className='text-3xl font-bold mr-2 text-primary group-hover:text-white'>
-                      {step.number}
-                    </span>
-                    <h3 className='text-xl font-semibold'>{step.title}</h3>
+                  <div>
+                    <div className='flex items-center mb-4'>
+                      <span className='text-3xl font-bold mr-2 text-primary group-hover:text-white transition-all duration-300 ease-in-out'>
+                        {step.number}
+                      </span>
+                      <h3 className='text-xl font-semibold'>
+                        {step.title}
+                      </h3>
+                    </div>
+                    <p className='text-sm text-gray-600 group-hover:text-white/90 transition-all duration-300 ease-in-out'>
+                      {step.description}
+                    </p>
                   </div>
-                  <p className='text-sm text-gray-600 group-hover:text-white/90'>
-                    {step.description}
-                  </p>
                 </div>
               ))}
             </div>

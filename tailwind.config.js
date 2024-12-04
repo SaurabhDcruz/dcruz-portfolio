@@ -16,6 +16,7 @@ export default {
       },
       backgroundImage:{
         'gradient-box-w':'var(--gradient-box-w)',
+        'gradient-box-primary':'var(--gradient-box-primary)',
         'gradient-red-hover':'var(--gradient-red-hover)'
       },
       screens: {

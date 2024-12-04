@@ -87,21 +87,23 @@ const WhatIDo = () => {
         </h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-14'>
           {services.map((service, index) => (
-            <div className='group'>
+            <div className='group' key={index}>
               <div
                 key={index}
-                className='bg-gradient-box-w cursor-pointer xl:h-[300px] xl:w-[400px] p-6 rounded-lg shadow-white-3 transition-all duration-300  group-hover:bg-gradient-red-hover'
+                className='bg-gradient-box-w cursor-pointer xl:h-[300px] xl:w-[400px] p-6 rounded-lg shadow-white-3  group-hover:bg-gradient-red-hover transition-transform duration-500'
               >
-                <div className='text-[35px] text-primary group-hover:text-white transition-colors duration-300'>
-                  {service.icon}
+                <div className='hover:-translate-y-2 transition-transform duration-300'>
+                  <div className='text-[35px] text-primary group-hover:text-white transition-colors duration-300'>
+                    {service.icon}
+                  </div>
+                  <h3 className='text-xl font-semibold my-6 text-gray-900 group-hover:text-white transition-colors duration-300'>
+                    {service.title}
+                  </h3>
+                  <p className='text-gray-600 text-base leading-7 mt-8 group-hover:text-white transition-colors duration-300'>
+                    {service.description}
+                  </p>
+                  <FaArrowRightLong className='mt-7 ml-1 text-xl opacity-0 group-hover:opacity-100 group-hover:text-white transition-all duration-300' />
                 </div>
-                <h3 className='text-xl font-semibold my-6 text-gray-900 group-hover:text-white transition-colors duration-300'>
-                  {service.title}
-                </h3>
-                <p className='text-gray-600 text-base leading-7 mt-8 group-hover:text-white transition-colors duration-300'>
-                  {service.description}
-                </p>
-                <FaArrowRightLong className='mt-7 ml-1 text-xl opacity-0 group-hover:opacity-100 group-hover:text-white transition-all duration-300' />
               </div>
             </div>
           ))}

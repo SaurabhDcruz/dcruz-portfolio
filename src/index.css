@@ -25,6 +25,7 @@
   /* Gradient */
   --gradient-box-w: linear-gradient(145deg, #e2e8ec, #ffffff);
   --gradient-red-hover: linear-gradient(145deg, #ff4500, #d11414);
+  --gradient-box-primary: linear-gradient(145deg, #ff4500, #ff4500);
 
   /* typo Color */
   --color-heading: #ffffff;
