@@ -72,7 +72,7 @@ const WhatIDo = () => {
     return (
         <div className="min-h-screen bg-gray-50 p-4 md:p-8">
             <section className="max-w-7xl mx-auto">
-                <h4 className="font-[400] text-sm uppercase text-primary hover:text-[--color-check] letterWordSpacing">Features</h4>
+                <h4 className="font-[400] text-sm uppercase text-primary letterWordSpacing">Features</h4>
                 <h2 className="text-[60px] font-bold leading-[1.2] text-[#3c3e41] mt-7 mb-11 mb">What I Do</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
                     {services.map((service, index) => (
