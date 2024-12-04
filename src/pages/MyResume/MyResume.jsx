@@ -70,7 +70,7 @@ const MyResume = () => {
         <div className="min-h-screen bg-gray-50 p-4 md:p-8">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-12">
-                    <p className="text-primary text-sm uppercase tracking-wider mb-2">
+                    <p className="text-primary text-sm uppercase letterWordSpacing mb-2">
                         7+ YEARS OF EXPERIENCE
                     </p>
                     <h2 className="text-4xl font-bold text-gray-800">My Resume</h2>

@@ -38,32 +38,32 @@ const WhatIDo = () => {
 
     const portfolio = [
         {
-            image: "https://kzmnzbxuxao12h02wyfq.lite.vusercontent.net/placeholder.svg?height=400&width=600",
+            image: "./assets/Theservicesprovidefordesign.png?height=400&width=600",
             title: "The services provide for design",
             category: "Design",
         },
         {
-            image: "https://kzmnzbxuxao12h02wyfq.lite.vusercontent.net/placeholder.svg?height=400&width=600",
+            image: "./assets/Mobileapplandingdesignappmaintain.png?height=400&width=600",
             title: "Mobile app landing design & app maintain",
             category: "Development",
         },
         {
-            image: "https://kzmnzbxuxao12h02wyfq.lite.vusercontent.net/placeholder.svg?height=400&width=600",
+            image: "./assets/LogodesigncreativityApplication.png?height=400&width=600",
             title: "Logo design creativity & Application",
             category: "Creative",
         },
         {
-            image: "https://kzmnzbxuxao12h02wyfq.lite.vusercontent.net/placeholder.svg?height=400&width=600",
+            image: "./assets/MobileapplandingdesignServices.png?height=400&width=600",
             title: "Mobile app landing design & Services",
             category: "Design",
         },
         {
-            image: "https://kzmnzbxuxao12h02wyfq.lite.vusercontent.net/placeholder.svg?height=400&width=600",
+            image: "./assets/Designfortechnologyservices.png?height=400&width=600",
             title: "Design for technology & services",
             category: "Development",
         },
         {
-            image: "https://kzmnzbxuxao12h02wyfq.lite.vusercontent.net/placeholder.svg?height=400&width=600",
+            image: "./assets/Appfortechnologyservices.png?height=400&width=600",
             title: "App for technology & services",
             category: "Creative",
         },
@@ -107,8 +107,8 @@ const WhatIDo = () => {
             <div className='px-5 pt-5'>
                 <div className="aspect-w-16 aspect-h-9 overflow-hidden rounded-md">
                     <img
-                        src={item.image}
-                        alt={item.title}
+                        src={item?.image}
+                        alt={item?.title}
                         className="object-cover w-full h-full transition-transform duration-300 transform group-hover:scale-110"
                     />
                 </div>

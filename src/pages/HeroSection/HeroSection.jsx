@@ -43,19 +43,19 @@ const HeroSection = () => {
                       href='#'
                       className='p-4 bg-white rounded-lg shadow-white-3 hover:-translate-y-1 group bg-gradient-box-w hover:bg-gradient-red-hover transition-all duration-500'
                     >
-                      <Facebook className='h-5 w-5 text-gray-600 group-hover:text-white duration-300' />
+                      <Facebook className='h-6 w-6 text-gray-600 group-hover:text-white duration-300' />
                     </a>
                     <a
                       href='#'
                       className='p-4 bg-white rounded-lg shadow-white-3 hover:-translate-y-1 group bg-gradient-box-w hover:bg-gradient-red-hover transition-all duration-500'
                     >
-                      <Instagram className='h-5 w-5 text-gray-600 group-hover:text-white duration-300' />
+                      <Instagram className='h-6 w-6 text-gray-600 group-hover:text-white duration-300' />
                     </a>
                     <a
                       href='#'
                       className='p-4 bg-white rounded-lg shadow-white-3 hover:-translate-y-1 group bg-gradient-box-w hover:bg-gradient-red-hover transition-all duration-500'
                     >
-                      <Linkedin className='h-5 w-5 text-gray-600 group-hover:text-white duration-300' />
+                      <Linkedin className='h-6 w-6 text-gray-600 group-hover:text-white duration-300' />
                     </a>
                   </div>
                 </div>
@@ -66,14 +66,14 @@ const HeroSection = () => {
                     BEST SKILL ON
                   </h3>
                   <div className='flex space-x-4'>
-                    {['sketch', 'figma', 'photoshop'].map(skill => (
-                      <a
-                        key={skill}
-                        href='#'
-                        className='p-4 bg-white rounded-lg shadow-white-3 bg-gradient-box-w hover:bg-gradient-red-hover transition-shadow'
+                    {['https://rainbowit.net/html/inbio/assets/images/icons/icons-01.png', 'https://rainbowit.net/html/inbio/assets/images/icons/icons-02.png', 'https://rainbowit.net/html/inbio/assets/images/icons/icons-03.png'].map(skill => (
+                      <div
+                      key={skill}
+                      className='p-4 bg-white rounded-lg shadow-white-3 hover:-translate-y-1 bg-gradient-box-w  transition-all duration-500'
                       >
-                        <div className='w-6 h-6 bg-gray-300 rounded' />
-                      </a>
+                        {console.log(skill)}
+                        <img src={skill} alt='icon' className='h-6 w-6 object-scale-down' />
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -92,8 +92,8 @@ const HeroSection = () => {
         </div>
 
         {/* Side Text */}
-        <div className='fixed right-0 top-1/2 -translate-y-1/2 hidden lg:block'>
-          <div className='vertical-text transform rotate-90 text-primary tracking-widest text-sm'>
+        <div className='fixed right-0 top-1/2 -translate-y-1/2 hidden lg:block h-[100px] w-[41px] rounded bg-gradient-box-w shadow-white-3 cursor-pointer'>
+          <div className='vertical-text transform rotate-90 text-primary tracking-widest text-sm  absolute top-[40px] right-[-8px]'>
             DEMOS
           </div>
         </div>
