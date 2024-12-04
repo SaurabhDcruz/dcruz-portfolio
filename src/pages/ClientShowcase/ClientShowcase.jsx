@@ -56,7 +56,7 @@ const ClientShowcase = () => {
         <p className='font-[400] text-sm uppercase text-primary letterWordSpacing'>
           POPULAR CLIENTS
         </p>
-        <h2 className='text-[60px] font-bold leading-[1.2] text-[#3c3e41] mt-7 mb-11 mb'>
+        <h2 className='xs:text-[26px] sm:text-[34px] lg:text-[60px] font-bold leading-[1.2] text-[#3c3e41] mt-7 mb-11 mb'>
           Awesome Clients
         </h2>
         <div className='grid md:grid-rows-3 sm:grid-rows-1 grid-flow-col gap-4'>

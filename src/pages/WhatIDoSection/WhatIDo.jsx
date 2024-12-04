@@ -82,7 +82,7 @@ const WhatIDo = () => {
         <h4 className='font-[400] text-sm uppercase text-primary letterWordSpacing'>
           Features
         </h4>
-        <h2 className='text-[60px] font-bold leading-[1.2] text-[#3c3e41] mt-7 mb-11 mb'>
+        <h2 className='xs:text-[26px] sm:text-[34px] lg:text-[60px] font-bold leading-[1.2] text-[#3c3e41] mt-7 mb-11 mb'>
           What I Do
         </h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-14'>
@@ -113,7 +113,7 @@ const WhatIDo = () => {
           <p className='text-primary text-sm uppercase mb-2 letterWordSpacing'>
             VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK
           </p>
-          <h2 className='text-[60px] font-bold leading-[1.2] text-[#3c3e41] mt-[15px] mb-0'>
+          <h2 className='xs:text-[26px] sm:text-[34px] lg:text-[60px] font-bold leading-[1.2] text-[#3c3e41] mt-[15px] mb-0'>
             My Portfolio
           </h2>
         </div>
