@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Steps from '../../Components/Steps/Steps'
+import ProfessionalSkill from './ProfessionalSkills/ProfessionalSkill'
 
 const MyResume = () => {
   const [activeTab, setActiveTab] = useState('education')
@@ -99,7 +101,9 @@ const MyResume = () => {
           <p className='text-primary text-sm uppercase letterWordSpacing mb-2'>
             7+ YEARS OF EXPERIENCE
           </p>
-          <h2 className='text-4xl font-bold text-gray-800'>My Resume</h2>
+          <h2 className='xs:text-[26px] sm:text-[34px] lg:text-[60px] font-bold leading-[1.2] text-[#3c3e41]  mb-11 mb'>
+            My Resume
+          </h2>
         </div>
 
         {/* Tabs */}
@@ -121,451 +125,161 @@ const MyResume = () => {
         </div>
 
         {/* Stepper */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12'>
-          {steps.map((step, index) => (
+        <div className='space-y-10'>
+          <div className='relative'>
             <div
-              key={index}
-              className='bg-white p-6 rounded-lg shadow-sm hover:bg-primary hover:text-white transition-all duration-300 group'
+              className={`inset-0 transition-opacity duration-300 ${
+                activeTab === 'education'
+                  ? 'opacity-100 relative'
+                  : 'opacity-0 absolute'
+              }`}
             >
-              <div className='flex items-center mb-4'>
-                <span className='text-3xl font-bold mr-2 text-primary group-hover:text-white'>
-                  {step.number}
-                </span>
-                <h3 className='text-xl font-semibold'>{step.title}</h3>
-              </div>
-              <p className='text-sm text-gray-600 group-hover:text-white/90'>
-                {step.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className='relative'>
-          <div
-            className={`inset-0 transition-opacity duration-300 ${
-              activeTab === 'education'
-                ? 'opacity-100 relative'
-                : 'opacity-0 absolute'
-            }`}
-          >
-            {/* Content 1 */}
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
-              {/* Education Column */}
-              <div className='space-y-6'>
-                <h3 className='text-2xl font-bold mb-6'>Education Quality</h3>
-                <div className='p-4 md:p-8'>
-                  <div className='max-w-3xl mx-auto'>
-                    <div className='mb-8'>
-                      <span className='text-gray-600'>
-                        {educationData[0].period}
-                      </span>
-                    </div>
-                    <div className='relative'>
-                      {/* Vertical line */}
-                      <div className='absolute left-2.5 top-0 h-full w-[1px] bg-gray-200' />
-
-                      <div className='space-y-8'>
-                        {educationData.map((item, index) => (
-                          <div key={index} className='relative flex gap-6'>
-                            {/* Circle connector */}
-                            <div className='relative'>
-                              <div className='w-6 h-6 rounded-full border-2 border-gray-200 bg-white z-10 relative' />
-                            </div>
-
-                            {/* Content card */}
-                            <div className='flex-1 p-6 shadow-sm hover:shadow-md transition-shadow'>
-                              <div className='flex justify-between items-start mb-2'>
-                                <div>
-                                  <h3 className='text-xl font-semibold'>
-                                    {item.title}
-                                  </h3>
-                                  <p className='text-sm text-gray-600 mt-1'>
-                                    {item.institution}
-                                  </p>
-                                </div>
-                                <span className='text-primary text-sm'>
-                                  {item.rating}
-                                </span>
-                              </div>
-                              <p className='text-gray-600 text-sm leading-relaxed'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
+              {/* Content 1 */}
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                {/* Education Column */}
+                <div className='space-6'>
+                  <div className='md:px-5 xs:px-0 xs:pr-[10px]'>
+                    <h3 className='text-2xl font-bold'>Education Quality</h3>
+                    <div className='max-w-3xl mx-auto'>
+                      <div className='mb-8'>
+                        <span className='text-gray-600'>
+                          {educationData[0].period}
+                        </span>
                       </div>
+                      <Steps data={educationData} />
                     </div>
                   </div>
                 </div>
-              </div>
-              {/* Experience Column */}
-              <div className='space-y-6'>
-                <h3 className='text-2xl font-bold mb-6'>Job Experience</h3>
-                <div className='p-4 md:p-8'>
-                  <div className='max-w-3xl mx-auto'>
-                    <div className='mb-8'>
-                      <span className='text-gray-600'>
-                        {educationData[0].period}
-                      </span>
-                    </div>
-                    <div className='relative'>
-                      {/* Vertical line */}
-                      <div className='absolute left-2.5 top-0 h-full w-[1px] bg-gray-200' />
-                      <div className='space-y-8'>
-                        {educationData.map((item, index) => (
-                          <div key={index} className='relative flex gap-6'>
-                            {/* Circle connector */}
-                            <div className='relative'>
-                              <div className='w-6 h-6 rounded-full border-2 border-gray-200 bg-white z-10 relative' />
-                            </div>
-
-                            {/* Content card */}
-                            <div className='flex-1 p-6 shadow-sm hover:shadow-md transition-shadow'>
-                              <div className='flex justify-between items-start mb-2'>
-                                <div>
-                                  <h3 className='text-xl font-semibold'>
-                                    {item.title}
-                                  </h3>
-                                  <p className='text-sm text-gray-600 mt-1'>
-                                    {item.institution}
-                                  </p>
-                                </div>
-                                <span className='text-primary text-sm'>
-                                  {item.rating}
-                                </span>
-                              </div>
-                              <p className='text-gray-600 text-sm leading-relaxed'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
+                {/* Experience Column */}
+                <div className='space-6'>
+                  <div className='md:px-5 xs:px-0 xs:pr-[10px]'>
+                    <h3 className='text-2xl font-bold'>Job Experience</h3>
+                    <div className='max-w-3xl mx-auto'>
+                      <div className='mb-8'>
+                        <span className='text-gray-600'>
+                          {educationData[0].period}
+                        </span>
                       </div>
+                      <Steps data={educationData} />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div
-            className={`inset-0 transition-opacity duration-300 ${
-              activeTab === 'skills'
-                ? 'opacity-100 relative'
-                : 'opacity-0 absolute'
-            }`}
-          >
-            {/* Content 2 */}
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
-              {/* Design Skill */}
-              <div className='space-y-6'>
-                <h3 className='text-2xl font-bold mb-6'>Design Skill</h3>
-                <div className='p-4 md:p-8'>
-                  <div className='max-w-3xl mx-auto'>
-                    <div className='mb-8'>
-                      <span className='text-gray-600'>
-                        {educationData[0].period}
-                      </span>
-                    </div>
-                    <div className='relative'>
-                      {/* Vertical line */}
-                      <div className='absolute left-2.5 top-0 h-full w-[1px] bg-gray-200' />
+            <div
+              className={`inset-0 transition-opacity duration-300 ${
+                activeTab === 'skills'
+                  ? 'opacity-100 relative'
+                  : 'opacity-0 absolute'
+              }`}
+            >
+              {/* Content 2 */}
+              <ProfessionalSkill />
+            </div>
 
-                      <div className='space-y-8'>
-                        {educationData.map((item, index) => (
-                          <div key={index} className='relative flex gap-6'>
-                            {/* Circle connector */}
-                            <div className='relative'>
-                              <div className='w-6 h-6 rounded-full border-2 border-gray-200 bg-white z-10 relative' />
-                            </div>
-
-                            {/* Content card */}
-                            <div className='flex-1 p-6 shadow-sm hover:shadow-md transition-shadow'>
-                              <div className='flex justify-between items-start mb-2'>
-                                <div>
-                                  <h3 className='text-xl font-semibold'>
-                                    {item.title}
-                                  </h3>
-                                  <p className='text-sm text-gray-600 mt-1'>
-                                    {item.institution}
-                                  </p>
-                                </div>
-                                <span className='text-primary text-sm'>
-                                  {item.rating}
-                                </span>
-                              </div>
-                              <p className='text-gray-600 text-sm leading-relaxed'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
+            <div
+              className={`inset-0 transition-opacity duration-300 ${
+                activeTab === 'experience'
+                  ? 'opacity-100 relative'
+                  : 'opacity-0 absolute'
+              }`}
+            >
+              {/* Content 3 */}
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                {/* Education Column */}
+                <div className='space-6'>
+                  <div className='md:px-5 xs:px-0 xs:pr-[10px]'>
+                    <h3 className='text-2xl font-bold'>Education Quality</h3>
+                    <div className='max-w-3xl mx-auto'>
+                      <div className='mb-8'>
+                        <span className='text-gray-600'>
+                          {educationData[0].period}
+                        </span>
                       </div>
+                      <Steps data={educationData} />
+                    </div>
+                  </div>
+                </div>
+                {/* Experience Column */}
+                <div className='space-6'>
+                  <div className='md:px-5 xs:px-0 xs:pr-[10px]'>
+                    <h3 className='text-2xl font-bold'>Job Experience</h3>
+                    <div className='max-w-3xl mx-auto'>
+                      <div className='mb-8'>
+                        <span className='text-gray-600'>
+                          {educationData[0].period}
+                        </span>
+                      </div>
+                      <Steps data={educationData} />
                     </div>
                   </div>
                 </div>
               </div>
-              {/* Development Skill */}
-              <div className='space-y-6'>
-                <h3 className='text-2xl font-bold mb-6'>Development Skill</h3>
-                <div className='p-4 md:p-8'>
-                  <div className='max-w-3xl mx-auto'>
-                    <div className='mb-8'>
-                      <span className='text-gray-600'>
-                        {educationData[0].period}
-                      </span>
-                    </div>
-                    <div className='relative'>
-                      {/* Vertical line */}
-                      <div className='absolute left-2.5 top-0 h-full w-[1px] bg-gray-200' />
-                      <div className='space-y-8'>
-                        {educationData.map((item, index) => (
-                          <div key={index} className='relative flex gap-6'>
-                            {/* Circle connector */}
-                            <div className='relative'>
-                              <div className='w-6 h-6 rounded-full border-2 border-gray-200 bg-white z-10 relative' />
-                            </div>
+            </div>
 
-                            {/* Content card */}
-                            <div className='flex-1 p-6 shadow-sm hover:shadow-md transition-shadow'>
-                              <div className='flex justify-between items-start mb-2'>
-                                <div>
-                                  <h3 className='text-xl font-semibold'>
-                                    {item.title}
-                                  </h3>
-                                  <p className='text-sm text-gray-600 mt-1'>
-                                    {item.institution}
-                                  </p>
-                                </div>
-                                <span className='text-primary text-sm'>
-                                  {item.rating}
-                                </span>
-                              </div>
-                              <p className='text-gray-600 text-sm leading-relaxed'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
+            <div
+              className={`inset-0 transition-opacity duration-300 ${
+                activeTab === 'interview'
+                  ? 'opacity-100 relative'
+                  : 'opacity-0 absolute'
+              }`}
+            >
+              {/* Content 4 */}
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                {/* Education Column */}
+                <div className='space-6'>
+                  <div className='md:px-5 xs:px-0 xs:pr-[10px] '>
+                    <h3 className='text-2xl font-bold'>Company Experi</h3>
+                    <div className='max-w-3xl mx-auto'>
+                      <div className='mb-8'>
+                        <span className='text-gray-600'>
+                          {educationData[0].period}
+                        </span>
                       </div>
+                      <Steps data={educationData} />
+                    </div>
+                  </div>
+                </div>
+                {/* Experience Column */}
+                <div className='space-6'>
+                  <div className='md:px-5 xs:px-0 xs:pr-[10px] '>
+                    <h3 className='text-2xl font-bold'>Job Experience</h3>
+                    <div className='max-w-3xl mx-auto'>
+                      <div className='mb-8'>
+                        <span className='text-gray-600'>
+                          {educationData[0].period}
+                        </span>
+                      </div>
+                      <Steps data={educationData} />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div
-            className={`inset-0 transition-opacity duration-300 ${
-              activeTab === 'experience'
-                ? 'opacity-100 relative'
-                : 'opacity-0 absolute'
-            }`}
-          >
-            {/* Content 3 */}
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
-              {/* Education Column */}
-              <div className='space-y-6'>
-                <h3 className='text-2xl font-bold mb-6'>Education Quality</h3>
-                <div className='p-4 md:p-8'>
-                  <div className='max-w-3xl mx-auto'>
-                    <div className='mb-8'>
-                      <span className='text-gray-600'>
-                        {educationData[0].period}
+          <div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 '>
+              {steps.map((step, index) => (
+                <div
+                  key={index}
+                  className='bg-white p-6 rounded-lg shadow-white-3 bg-gradient-box-w hover:bg-gradient-box-primary hover:text-white group transition-all duration-300 ease-in-out'
+                >
+                  <div>
+                    <div className='flex items-center mb-4'>
+                      <span className='text-3xl font-bold mr-2 text-primary group-hover:text-white transition-all duration-300 ease-in-out'>
+                        {step.number}
                       </span>
+                      <h3 className='text-xl font-semibold'>
+                        {step.title}
+                      </h3>
                     </div>
-                    <div className='relative'>
-                      {/* Vertical line */}
-                      <div className='absolute left-2.5 top-0 h-full w-[1px] bg-gray-200' />
-
-                      <div className='space-y-8'>
-                        {educationData.map((item, index) => (
-                          <div key={index} className='relative flex gap-6'>
-                            {/* Circle connector */}
-                            <div className='relative'>
-                              <div className='w-6 h-6 rounded-full border-2 border-gray-200 bg-white z-10 relative' />
-                            </div>
-
-                            {/* Content card */}
-                            <div className='flex-1 p-6 shadow-sm hover:shadow-md transition-shadow'>
-                              <div className='flex justify-between items-start mb-2'>
-                                <div>
-                                  <h3 className='text-xl font-semibold'>
-                                    {item.title}
-                                  </h3>
-                                  <p className='text-sm text-gray-600 mt-1'>
-                                    {item.institution}
-                                  </p>
-                                </div>
-                                <span className='text-primary text-sm'>
-                                  {item.rating}
-                                </span>
-                              </div>
-                              <p className='text-gray-600 text-sm leading-relaxed'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                    <p className='text-sm text-gray-600 group-hover:text-white/90 transition-all duration-300 ease-in-out'>
+                      {step.description}
+                    </p>
                   </div>
                 </div>
-              </div>
-              {/* Experience Column */}
-              <div className='space-y-6'>
-                <h3 className='text-2xl font-bold mb-6'>Job Experience</h3>
-                <div className='p-4 md:p-8'>
-                  <div className='max-w-3xl mx-auto'>
-                    <div className='mb-8'>
-                      <span className='text-gray-600'>
-                        {educationData[0].period}
-                      </span>
-                    </div>
-                    <div className='relative'>
-                      {/* Vertical line */}
-                      <div className='absolute left-2.5 top-0 h-full w-[1px] bg-gray-200' />
-                      <div className='space-y-8'>
-                        {educationData.map((item, index) => (
-                          <div key={index} className='relative flex gap-6'>
-                            {/* Circle connector */}
-                            <div className='relative'>
-                              <div className='w-6 h-6 rounded-full border-2 border-gray-200 bg-white z-10 relative' />
-                            </div>
-
-                            {/* Content card */}
-                            <div className='flex-1 p-6 shadow-sm hover:shadow-md transition-shadow'>
-                              <div className='flex justify-between items-start mb-2'>
-                                <div>
-                                  <h3 className='text-xl font-semibold'>
-                                    {item.title}
-                                  </h3>
-                                  <p className='text-sm text-gray-600 mt-1'>
-                                    {item.institution}
-                                  </p>
-                                </div>
-                                <span className='text-primary text-sm'>
-                                  {item.rating}
-                                </span>
-                              </div>
-                              <p className='text-gray-600 text-sm leading-relaxed'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className={`inset-0 transition-opacity duration-300 ${
-              activeTab === 'interview'
-                ? 'opacity-100 relative'
-                : 'opacity-0 absolute'
-            }`}
-          >
-            {/* Content 4 */}
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
-              {/* Education Column */}
-              <div className='space-y-6'>
-                <h3 className='text-2xl font-bold mb-6'>Company Experience</h3>
-                <div className='p-4 md:p-8'>
-                  <div className='max-w-3xl mx-auto'>
-                    <div className='mb-8'>
-                      <span className='text-gray-600'>
-                        {educationData[0].period}
-                      </span>
-                    </div>
-                    <div className='relative'>
-                      {/* Vertical line */}
-                      <div className='absolute left-2.5 top-0 h-full w-[1px] bg-gray-200' />
-
-                      <div className='space-y-8'>
-                        {educationData.map((item, index) => (
-                          <div key={index} className='relative flex gap-6'>
-                            {/* Circle connector */}
-                            <div className='relative'>
-                              <div className='w-6 h-6 rounded-full border-2 border-gray-200 bg-white z-10 relative' />
-                            </div>
-
-                            {/* Content card */}
-                            <div className='flex-1 p-6 shadow-sm hover:shadow-md transition-shadow'>
-                              <div className='flex justify-between items-start mb-2'>
-                                <div>
-                                  <h3 className='text-xl font-semibold'>
-                                    {item.title}
-                                  </h3>
-                                  <p className='text-sm text-gray-600 mt-1'>
-                                    {item.institution}
-                                  </p>
-                                </div>
-                                <span className='text-primary text-sm'>
-                                  {item.rating}
-                                </span>
-                              </div>
-                              <p className='text-gray-600 text-sm leading-relaxed'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* Experience Column */}
-              <div className='space-y-6'>
-                <h3 className='text-2xl font-bold mb-6'>Job Experience</h3>
-                <div className='p-4 md:p-8'>
-                  <div className='max-w-3xl mx-auto'>
-                    <div className='mb-8'>
-                      <span className='text-gray-600'>
-                        {educationData[0].period}
-                      </span>
-                    </div>
-                    <div className='relative'>
-                      {/* Vertical line */}
-                      <div className='absolute left-2.5 top-0 h-full w-[1px] bg-gray-200' />
-                      <div className='space-y-8'>
-                        {educationData.map((item, index) => (
-                          <div key={index} className='relative flex gap-6'>
-                            {/* Circle connector */}
-                            <div className='relative'>
-                              <div className='w-6 h-6 rounded-full border-2 border-gray-200 bg-white z-10 relative' />
-                            </div>
-
-                            {/* Content card */}
-                            <div className='flex-1 p-6 shadow-sm hover:shadow-md transition-shadow'>
-                              <div className='flex justify-between items-start mb-2'>
-                                <div>
-                                  <h3 className='text-xl font-semibold'>
-                                    {item.title}
-                                  </h3>
-                                  <p className='text-sm text-gray-600 mt-1'>
-                                    {item.institution}
-                                  </p>
-                                </div>
-                                <span className='text-primary text-sm'>
-                                  {item.rating}
-                                </span>
-                              </div>
-                              <p className='text-gray-600 text-sm leading-relaxed'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

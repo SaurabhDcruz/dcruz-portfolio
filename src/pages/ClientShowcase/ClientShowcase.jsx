@@ -51,12 +51,12 @@ const ClientShowcase = () => {
   ]
 
   return (
-    <div className='max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8'>
+    <div className='max-w-7xl mx-auto p-4 sm:px-6 lg:px-8'>
       <div className='space-y-4'>
         <p className='font-[400] text-sm uppercase text-primary letterWordSpacing'>
           POPULAR CLIENTS
         </p>
-        <h2 className='text-[60px] font-bold leading-[1.2] text-[#3c3e41] mt-7 mb-11 mb'>
+        <h2 className='xs:text-[26px] sm:text-[34px] lg:text-[60px] font-bold leading-[1.2] my-0 text-[#3c3e41] '>
           Awesome Clients
         </h2>
         <div className='grid md:grid-rows-3 sm:grid-rows-1 grid-flow-col gap-4'>

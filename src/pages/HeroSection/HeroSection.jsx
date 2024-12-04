@@ -32,9 +32,9 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              <div className='flex items-center gap-[50px]'>
+              <div className='md:flex items-center gap-[50px]'>
                 {/* Social Links */}
-                <div className='space-y-4'>
+                <div className='space-y-4 xs:mt-8'>
                   <h3 className='text-sm font-medium text-gray-900'>
                     FIND WITH ME
                   </h3>
@@ -61,7 +61,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* Skills */}
-                <div className='space-y-4'>
+                <div className='space-y-4 xs:mt-8'>
                   <h3 className='text-sm font-medium text-gray-900'>
                     BEST SKILL ON
                   </h3>
@@ -71,7 +71,6 @@ const HeroSection = () => {
                       key={skill}
                       className='p-4 bg-white rounded-lg shadow-white-3 hover:-translate-y-1 bg-gradient-box-w  transition-all duration-500'
                       >
-                        {console.log(skill)}
                         <img src={skill} alt='icon' className='h-6 w-6 object-scale-down' />
                       </div>
                     ))}
@@ -92,7 +91,7 @@ const HeroSection = () => {
         </div>
 
         {/* Side Text */}
-        <div className='fixed right-0 top-1/2 -translate-y-1/2 hidden lg:block h-[100px] w-[41px] rounded bg-gradient-box-w shadow-white-3 cursor-pointer'>
+        <div className='fixed right-0 top-1/2 -translate-y-1/2 hidden lg:block h-[100px] w-[41px] rounded bg-gradient-box-w shadow-white-3 cursor-pointer z-20'>
           <div className='vertical-text transform rotate-90 text-primary tracking-widest text-sm  absolute top-[40px] right-[-8px]'>
             DEMOS
           </div>
