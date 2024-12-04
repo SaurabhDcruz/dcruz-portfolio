@@ -32,9 +32,9 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              <div className='flex items-center gap-[50px]'>
+              <div className='md:flex items-center gap-[50px]'>
                 {/* Social Links */}
-                <div className='space-y-4'>
+                <div className='space-y-4 xs:mt-8'>
                   <h3 className='text-sm font-medium text-gray-900'>
                     FIND WITH ME
                   </h3>
@@ -61,7 +61,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* Skills */}
-                <div className='space-y-4'>
+                <div className='space-y-4 xs:mt-8'>
                   <h3 className='text-sm font-medium text-gray-900'>
                     BEST SKILL ON
                   </h3>

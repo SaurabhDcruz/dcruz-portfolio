@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Steps from '../../Components/Steps/Steps'
 
 const MyResume = () => {
   const [activeTab, setActiveTab] = useState('education')
@@ -160,41 +161,7 @@ const MyResume = () => {
                         {educationData[0].period}
                       </span>
                     </div>
-                    <div className='relative'>
-                      {/* Vertical line */}
-                      <div className='absolute left-2.5 top-0 h-full w-[1px] bg-gray-200' />
-
-                      <div className='space-y-8'>
-                        {educationData.map((item, index) => (
-                          <div key={index} className='relative flex gap-6'>
-                            {/* Circle connector */}
-                            <div className='relative'>
-                              <div className='w-6 h-6 rounded-full border-2 border-gray-200 bg-white z-10 relative' />
-                            </div>
-
-                            {/* Content card */}
-                            <div className='flex-1 p-6 shadow-sm hover:shadow-md transition-shadow'>
-                              <div className='flex justify-between items-start mb-2'>
-                                <div>
-                                  <h3 className='text-xl font-semibold'>
-                                    {item.title}
-                                  </h3>
-                                  <p className='text-sm text-gray-600 mt-1'>
-                                    {item.institution}
-                                  </p>
-                                </div>
-                                <span className='text-primary text-sm'>
-                                  {item.rating}
-                                </span>
-                              </div>
-                              <p className='text-gray-600 text-sm leading-relaxed'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                    <Steps data={educationData} />
                   </div>
                 </div>
               </div>
@@ -208,40 +175,7 @@ const MyResume = () => {
                         {educationData[0].period}
                       </span>
                     </div>
-                    <div className='relative'>
-                      {/* Vertical line */}
-                      <div className='absolute left-2.5 top-0 h-full w-[1px] bg-gray-200' />
-                      <div className='space-y-8'>
-                        {educationData.map((item, index) => (
-                          <div key={index} className='relative flex gap-6'>
-                            {/* Circle connector */}
-                            <div className='relative'>
-                              <div className='w-6 h-6 rounded-full border-2 border-gray-200 bg-white z-10 relative' />
-                            </div>
-
-                            {/* Content card */}
-                            <div className='flex-1 p-6 shadow-sm hover:shadow-md transition-shadow'>
-                              <div className='flex justify-between items-start mb-2'>
-                                <div>
-                                  <h3 className='text-xl font-semibold'>
-                                    {item.title}
-                                  </h3>
-                                  <p className='text-sm text-gray-600 mt-1'>
-                                    {item.institution}
-                                  </p>
-                                </div>
-                                <span className='text-primary text-sm'>
-                                  {item.rating}
-                                </span>
-                              </div>
-                              <p className='text-gray-600 text-sm leading-relaxed'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                    <Steps data={educationData} />
                   </div>
                 </div>
               </div>
@@ -267,41 +201,7 @@ const MyResume = () => {
                         {educationData[0].period}
                       </span>
                     </div>
-                    <div className='relative'>
-                      {/* Vertical line */}
-                      <div className='absolute left-2.5 top-0 h-full w-[1px] bg-gray-200' />
-
-                      <div className='space-y-8'>
-                        {educationData.map((item, index) => (
-                          <div key={index} className='relative flex gap-6'>
-                            {/* Circle connector */}
-                            <div className='relative'>
-                              <div className='w-6 h-6 rounded-full border-2 border-gray-200 bg-white z-10 relative' />
-                            </div>
-
-                            {/* Content card */}
-                            <div className='flex-1 p-6 shadow-sm hover:shadow-md transition-shadow'>
-                              <div className='flex justify-between items-start mb-2'>
-                                <div>
-                                  <h3 className='text-xl font-semibold'>
-                                    {item.title}
-                                  </h3>
-                                  <p className='text-sm text-gray-600 mt-1'>
-                                    {item.institution}
-                                  </p>
-                                </div>
-                                <span className='text-primary text-sm'>
-                                  {item.rating}
-                                </span>
-                              </div>
-                              <p className='text-gray-600 text-sm leading-relaxed'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                    <Steps data={educationData} />
                   </div>
                 </div>
               </div>
@@ -315,40 +215,7 @@ const MyResume = () => {
                         {educationData[0].period}
                       </span>
                     </div>
-                    <div className='relative'>
-                      {/* Vertical line */}
-                      <div className='absolute left-2.5 top-0 h-full w-[1px] bg-gray-200' />
-                      <div className='space-y-8'>
-                        {educationData.map((item, index) => (
-                          <div key={index} className='relative flex gap-6'>
-                            {/* Circle connector */}
-                            <div className='relative'>
-                              <div className='w-6 h-6 rounded-full border-2 border-gray-200 bg-white z-10 relative' />
-                            </div>
-
-                            {/* Content card */}
-                            <div className='flex-1 p-6 shadow-sm hover:shadow-md transition-shadow'>
-                              <div className='flex justify-between items-start mb-2'>
-                                <div>
-                                  <h3 className='text-xl font-semibold'>
-                                    {item.title}
-                                  </h3>
-                                  <p className='text-sm text-gray-600 mt-1'>
-                                    {item.institution}
-                                  </p>
-                                </div>
-                                <span className='text-primary text-sm'>
-                                  {item.rating}
-                                </span>
-                              </div>
-                              <p className='text-gray-600 text-sm leading-relaxed'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                    <Steps data={educationData} />
                   </div>
                 </div>
               </div>
@@ -374,41 +241,7 @@ const MyResume = () => {
                         {educationData[0].period}
                       </span>
                     </div>
-                    <div className='relative'>
-                      {/* Vertical line */}
-                      <div className='absolute left-2.5 top-0 h-full w-[1px] bg-gray-200' />
-
-                      <div className='space-y-8'>
-                        {educationData.map((item, index) => (
-                          <div key={index} className='relative flex gap-6'>
-                            {/* Circle connector */}
-                            <div className='relative'>
-                              <div className='w-6 h-6 rounded-full border-2 border-gray-200 bg-white z-10 relative' />
-                            </div>
-
-                            {/* Content card */}
-                            <div className='flex-1 p-6 shadow-sm hover:shadow-md transition-shadow'>
-                              <div className='flex justify-between items-start mb-2'>
-                                <div>
-                                  <h3 className='text-xl font-semibold'>
-                                    {item.title}
-                                  </h3>
-                                  <p className='text-sm text-gray-600 mt-1'>
-                                    {item.institution}
-                                  </p>
-                                </div>
-                                <span className='text-primary text-sm'>
-                                  {item.rating}
-                                </span>
-                              </div>
-                              <p className='text-gray-600 text-sm leading-relaxed'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                    <Steps data={educationData} />
                   </div>
                 </div>
               </div>
@@ -422,40 +255,7 @@ const MyResume = () => {
                         {educationData[0].period}
                       </span>
                     </div>
-                    <div className='relative'>
-                      {/* Vertical line */}
-                      <div className='absolute left-2.5 top-0 h-full w-[1px] bg-gray-200' />
-                      <div className='space-y-8'>
-                        {educationData.map((item, index) => (
-                          <div key={index} className='relative flex gap-6'>
-                            {/* Circle connector */}
-                            <div className='relative'>
-                              <div className='w-6 h-6 rounded-full border-2 border-gray-200 bg-white z-10 relative' />
-                            </div>
-
-                            {/* Content card */}
-                            <div className='flex-1 p-6 shadow-sm hover:shadow-md transition-shadow'>
-                              <div className='flex justify-between items-start mb-2'>
-                                <div>
-                                  <h3 className='text-xl font-semibold'>
-                                    {item.title}
-                                  </h3>
-                                  <p className='text-sm text-gray-600 mt-1'>
-                                    {item.institution}
-                                  </p>
-                                </div>
-                                <span className='text-primary text-sm'>
-                                  {item.rating}
-                                </span>
-                              </div>
-                              <p className='text-gray-600 text-sm leading-relaxed'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                    <Steps data={educationData} />
                   </div>
                 </div>
               </div>
@@ -481,41 +281,7 @@ const MyResume = () => {
                         {educationData[0].period}
                       </span>
                     </div>
-                    <div className='relative'>
-                      {/* Vertical line */}
-                      <div className='absolute left-2.5 top-0 h-full w-[1px] bg-gray-200' />
-
-                      <div className='space-y-8'>
-                        {educationData.map((item, index) => (
-                          <div key={index} className='relative flex gap-6'>
-                            {/* Circle connector */}
-                            <div className='relative'>
-                              <div className='w-6 h-6 rounded-full border-2 border-gray-200 bg-white z-10 relative' />
-                            </div>
-
-                            {/* Content card */}
-                            <div className='flex-1 p-6 shadow-sm hover:shadow-md transition-shadow'>
-                              <div className='flex justify-between items-start mb-2'>
-                                <div>
-                                  <h3 className='text-xl font-semibold'>
-                                    {item.title}
-                                  </h3>
-                                  <p className='text-sm text-gray-600 mt-1'>
-                                    {item.institution}
-                                  </p>
-                                </div>
-                                <span className='text-primary text-sm'>
-                                  {item.rating}
-                                </span>
-                              </div>
-                              <p className='text-gray-600 text-sm leading-relaxed'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                    <Steps data={educationData} />
                   </div>
                 </div>
               </div>
@@ -529,40 +295,7 @@ const MyResume = () => {
                         {educationData[0].period}
                       </span>
                     </div>
-                    <div className='relative'>
-                      {/* Vertical line */}
-                      <div className='absolute left-2.5 top-0 h-full w-[1px] bg-gray-200' />
-                      <div className='space-y-8'>
-                        {educationData.map((item, index) => (
-                          <div key={index} className='relative flex gap-6'>
-                            {/* Circle connector */}
-                            <div className='relative'>
-                              <div className='w-6 h-6 rounded-full border-2 border-gray-200 bg-white z-10 relative' />
-                            </div>
-
-                            {/* Content card */}
-                            <div className='flex-1 p-6 shadow-sm hover:shadow-md transition-shadow'>
-                              <div className='flex justify-between items-start mb-2'>
-                                <div>
-                                  <h3 className='text-xl font-semibold'>
-                                    {item.title}
-                                  </h3>
-                                  <p className='text-sm text-gray-600 mt-1'>
-                                    {item.institution}
-                                  </p>
-                                </div>
-                                <span className='text-primary text-sm'>
-                                  {item.rating}
-                                </span>
-                              </div>
-                              <p className='text-gray-600 text-sm leading-relaxed'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                    <Steps data={educationData} />
                   </div>
                 </div>
               </div>
