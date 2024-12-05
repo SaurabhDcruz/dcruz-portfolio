@@ -19,6 +19,9 @@ export default {
         'gradient-box-primary':'var(--gradient-box-primary)',
         'gradient-red-hover':'var(--gradient-red-hover)'
       },
+      transitionDelay: {
+        'transition-v1': 'var(--transition)'
+      },
       screens: {
         xs: { min: '310px', max: '639px' }
         // => @media (min-width: 360px) { ... }
