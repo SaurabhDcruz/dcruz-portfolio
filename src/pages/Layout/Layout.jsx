@@ -5,6 +5,7 @@ import MyResume from '../MyResume/MyResume'
 import ClientShowcase from '../ClientShowcase/ClientShowcase'
 import Header from './Header/Header'
 import Testimonial from '../Testimonial/Testimonial'
+import Pricing from '../Pricing/Pricing'
 
 const Layout = () => {
   return (
@@ -24,6 +25,9 @@ const Layout = () => {
 
       {/* ClientShowcase  */}
       <ClientShowcase />
+
+      {/* My Pricing */}
+      <Pricing />
     </div>
   )
 }

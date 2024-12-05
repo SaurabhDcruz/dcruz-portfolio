@@ -70,7 +70,7 @@ const Slider = () => {
   }, [currentSlide])
 
   return (
-    <div className='relative overflow-hidden '>
+    <div className='relative overflow-hidden py-2 '>
       <div
         className='flex transition-transform duration-500 ease-in-out'
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -163,7 +163,6 @@ const Slider = () => {
           </button>
         </div>
       </div>
-
       {/* Pagination Dots */}
       <div className='flex justify-center gap-2 mt-6'>
         {testimonials.map((_, index) => (

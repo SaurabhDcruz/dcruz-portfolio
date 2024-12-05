@@ -57,7 +57,7 @@ const Steps = ({ data }) => {
                 </span>
               </div>
               <hr className='my-3' />
-              <p className='text-gray-600 md:text-lg p-2 leading-relaxed transition-colors duration-200 ease-in-out group-hover:text-white'>
+              <p className='text-gray-600 md:text-[18px] p-2 leading-relaxed transition-colors duration-200 ease-in-out group-hover:text-white'>
                 {item.description}
               </p>
             </div>
