@@ -88,11 +88,8 @@ const WhatIDo = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-14'>
           {services.map((service, index) => (
             <div className='group' key={index}>
-              <div
-                key={index}
-                className='bg-gradient-box-w cursor-pointer xl:h-[300px] xl:w-[400px] p-6 rounded-lg shadow-white-3  group-hover:bg-gradient-red-hover transition-transform duration-500'
-              >
-                <div className='hover:-translate-y-2 transition-transform duration-300'>
+              <div className='bg-gradient-box-w group-hover:bg-gradient-red-hover cursor-pointer xl:h-[300px] xl:w-[400px] p-6 rounded-lg shadow-white-3 transition-all duration-500 ease-in-out '>
+                <div className='group-hover:-translate-y-2 transition-all duration-500'>
                   <div className='text-[35px] text-primary group-hover:text-white transition-colors duration-300'>
                     {service.icon}
                   </div>

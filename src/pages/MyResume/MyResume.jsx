@@ -107,16 +107,16 @@ const MyResume = () => {
         </div>
 
         {/* Tabs */}
-        <div className='grid lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1 gap-4 justify-center mb-12'>
+        <div className='grid lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1 justify-center mb-12 bg-gradient-box-w shadow-white-3 rounded-lg'>
           {tabs.map(tab => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-8 py-4 text-sm font-medium transition-colors duration-300 rounded-full
+              className={`px-8 py-7 text-[16px] font-medium transition-all duration-500 
                   ${
                     activeTab === tab.id
-                      ? 'bg-primary text-white'
-                      : 'bg-white text-gray-600 hover:bg-primary hover:text-white'
+                      ? 'bg-gradient-box-w text-primary shadow-white-3 rounded-lg'
+                      : 'text-gray-600 hover:bg-gradient-box-w hover:shadow-white-3 hover:text-primary rounded-lg'
                   }`}
             >
               {tab.label}
@@ -230,7 +230,7 @@ const MyResume = () => {
                 {/* Education Column */}
                 <div className='space-6'>
                   <div className='md:px-5 xs:px-0 xs:pr-[10px] '>
-                    <h3 className='text-2xl font-bold'>Company Experi</h3>
+                    <h3 className='text-2xl font-bold'>Company Experience</h3>
                     <div className='max-w-3xl mx-auto'>
                       <div className='mb-8'>
                         <span className='text-gray-600'>
