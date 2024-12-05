@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const ClientShowcase = () => {
+  const [activeTab, setActiveTab] = useState(0)
   const clients = [
     {
       skills: [
@@ -59,24 +60,31 @@ const ClientShowcase = () => {
         <h2 className='xs:text-[26px] sm:text-[34px] lg:text-[60px] font-bold leading-[1.2] my-0 text-[#3c3e41] '>
           Awesome Clients
         </h2>
-        <div className='grid md:grid-rows-3 sm:grid-rows-1 grid-flow-col gap-4'>
+        <div className='grid md:grid-rows-3 sm:grid-rows-1 grid-flow-col gap-4 xs:p-8 sm:p-7 md:p-0'>
           {/* Skills Card */}
-          <div className='col-span-full md!col-span-1 md:sticky md:top-[80px]'>
-            <div className='bg-white rounded-lg shadow-lg p-8 space-y-4'>
+          <div className='col-span-full lg:col-span-1 xl:sticky md:top-[80px]'>
+            <div className='bg-gradient-box-w rounded-lg shadow-lg text-center  '>
               {clients[0].skills.map((skill, index) => (
-                <div key={index} className='text-gray-600'>
+                <div
+                  key={index}
+                  onClick={() => setActiveTab(index)}
+                  className={`${
+                    activeTab == index &&
+                    'bg-gradient-box-w text-primary shadow-white-3 '
+                  }text-gray-600 px-4 py-5 cursor-pointer transition-all duration-300 hover:text-primary hover:bg-gradient-box-w hover:shadow-shadow-gray rounded-lg`}
+                >
                   {skill}
                 </div>
               ))}
             </div>
           </div>
           {/* Client Cards */}
-          <div className='row-span-3 col-span-full md:col-span-3'>
-            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8'>
+          <div className='row-span-3 col-span-full md:col-span-3 '>
+            <div className='grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5'>
               {clients.slice(1).map((client, index) => (
                 <div
                   key={index}
-                  className='bg-white rounded-lg shadow-lg p-8 flex flex-col items-center justify-center space-y-4 transition-transform hover:scale-105'
+                  className='bg-gradient-box-w rounded-lg shadow-white-3  flex flex-col items-center justify-center space-y-4'
                 >
                   <div className='w-40 h-20 flex items-center justify-center'>
                     <img
@@ -85,7 +93,8 @@ const ClientShowcase = () => {
                       className='max-w-full max-h-full object-contain'
                     />
                   </div>
-                  <p className='text-gray-600 text-center'>{client.name}</p>
+                  <hr className='w-full'/>
+                  <p className='text-gray-600 text-center p-1 '>{client.name}</p>
                 </div>
               ))}
             </div>

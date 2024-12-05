@@ -12,12 +12,17 @@ export default {
         'white-3': 'var(--shadow-white-3)',
         'shadow-1': 'var(--shadow-1)',
         'shadow-2': 'var(--shadow-2)',
+        'shadow-white-3':'var(--shadow-white-3)',
+        'shadow-gray':'var(--shadow-gray)',
         'inner-shadow': 'var(--inner-shadow)'
       },
       backgroundImage:{
         'gradient-box-w':'var(--gradient-box-w)',
         'gradient-box-primary':'var(--gradient-box-primary)',
         'gradient-red-hover':'var(--gradient-red-hover)'
+      },
+      transitionDelay: {
+        'transition-v1': 'var(--transition)'
       },
       screens: {
         xs: { min: '310px', max: '639px' }

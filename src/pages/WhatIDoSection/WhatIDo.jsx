@@ -78,30 +78,35 @@ const WhatIDo = () => {
 
   return (
     <div className='min-h-screen bg-gray-50 p-4 md:p-8'>
-      <section className='max-w-7xl mx-auto'>
-        <h4 className='font-[400] text-sm uppercase text-primary letterWordSpacing'>
-          Features
-        </h4>
-        <h2 className='xs:text-[26px] sm:text-[34px] lg:text-[60px] font-bold leading-[1.2] text-[#3c3e41] mt-7 mb-11 mb'>
-          What I Do
-        </h2>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-14'>
+      <section className='max-w-7xl mx-auto space-y-4'>
+        <div>
+          <h4 className='font-[400] text-sm uppercase text-primary letterWordSpacing'>
+            Features
+          </h4>
+        </div>
+        <div>
+          <h2 className='xs:text-[26px] sm:text-[34px] lg:text-[60px] font-bold leading-[1.2] text-[#3c3e41] mt-7 mb-11 mb'>
+            What I Do
+          </h2>
+        </div>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-x-12 gap-y-12'>
           {services.map((service, index) => (
             <div className='group' key={index}>
-              <div
-                key={index}
-                className='bg-gradient-box-w cursor-pointer xl:h-[300px] xl:w-[400px] p-6 rounded-lg shadow-white-3  group-hover:bg-gradient-red-hover transition-transform duration-500'
-              >
-                <div className='hover:-translate-y-2 transition-transform duration-300'>
+              <div className='bg-gradient-box-w group-hover:bg-gradient-red-hover cursor-pointer xl:h-[300px] xl:w-[390px] p-6 rounded-lg shadow-white-3 transition-all duration-500 ease-in-out '>
+                <div className='group-hover:-translate-y-2 transition-all duration-500 space-y-3'>
                   <div className='text-[35px] text-primary group-hover:text-white transition-colors duration-300'>
                     {service.icon}
                   </div>
-                  <h3 className='text-xl font-semibold my-6 text-gray-900 group-hover:text-white transition-colors duration-300'>
-                    {service.title}
-                  </h3>
-                  <p className='text-gray-600 text-base leading-7 mt-8 group-hover:text-white transition-colors duration-300'>
-                    {service.description}
-                  </p>
+                  <div>
+                    <h3 className='text-xl font-semibold my-6 text-gray-900 group-hover:text-white transition-colors duration-300'>
+                      {service.title}
+                    </h3>
+                  </div>
+                  <div>
+                    <p className='text-gray-600 text-base leading-7 mt-8 group-hover:text-white transition-colors duration-300'>
+                      {service.description}
+                    </p>
+                  </div>
                   <FaArrowRightLong className='mt-7 ml-1 text-xl opacity-0 group-hover:opacity-100 group-hover:text-white transition-all duration-300' />
                 </div>
               </div>
@@ -111,13 +116,17 @@ const WhatIDo = () => {
       </section>
 
       <section className='max-w-7xl mx-auto mt-20'>
-        <div className='text-center mb-12'>
-          <p className='text-primary text-sm uppercase mb-2 letterWordSpacing'>
-            VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK
-          </p>
-          <h2 className='xs:text-[26px] sm:text-[34px] lg:text-[60px] font-bold leading-[1.2] text-[#3c3e41] mt-[15px] mb-0'>
-            My Portfolio
-          </h2>
+        <div className='text-center space-y-4 mb-12'>
+          <div>
+            <p className='text-primary text-sm uppercase mb-2 letterWordSpacing'>
+              VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK
+            </p>
+          </div>
+          <div>
+            <h2 className='xs:text-[26px] sm:text-[34px] lg:text-[60px] font-bold leading-[1.2] text-[#3c3e41] mt-[15px] mb-0'>
+              My Portfolio
+            </h2>
+          </div>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
           {portfolio.map((item, index) => (
