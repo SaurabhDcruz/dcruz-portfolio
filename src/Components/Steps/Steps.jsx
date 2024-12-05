@@ -52,7 +52,7 @@ const Steps = ({ data }) => {
                     {item.institution}
                   </p>
                 </div>
-                <span className='text-primary flex justify-center items-center xs:text-[11px] xs:h-6 xs:w-[80px] xs:pt-1 md:text-sm md:h-[30px] md:w-[70px] bg-white transition-all shadow-white-3 duration-300 ease-in-out group-hover:shadow-md group-hover:bg-gradient-red-hover group-hover:text-white rounded-md'>
+                <span className='text-primary flex justify-center items-center xs:text-[11px] xs:h-6 xs:py-1 sm:py-1 px-2 md:text-sm md:h-[30px]  bg-white transition-all shadow-white-3 duration-300 ease-in-out group-hover:shadow-md group-hover:bg-gradient-red-hover group-hover:text-white rounded-md'>
                   {item.rating}
                 </span>
               </div>

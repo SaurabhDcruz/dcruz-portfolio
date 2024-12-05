@@ -97,13 +97,17 @@ const MyResume = () => {
   return (
     <div className='min-h-screen bg-gray-50 p-4 md:p-8 relative'>
       <div className='max-w-7xl mx-auto'>
-        <div className='text-center mb-12'>
-          <p className='text-primary text-sm uppercase letterWordSpacing mb-2'>
-            7+ YEARS OF EXPERIENCE
-          </p>
-          <h2 className='xs:text-[26px] sm:text-[34px] lg:text-[60px] font-bold leading-[1.2] text-[#3c3e41]  mb-11 mb'>
-            My Resume
-          </h2>
+        <div className='text-center mb-12 space-y-4'>
+          <div>
+            <p className='text-primary text-sm uppercase letterWordSpacing mb-2'>
+              7+ YEARS OF EXPERIENCE
+            </p>
+          </div>
+          <div>
+            <h2 className='xs:text-[26px] sm:text-[34px] lg:text-[60px] font-bold leading-[1.2] text-[#3c3e41]  mb-11 mb'>
+              My Resume
+            </h2>
+          </div>
         </div>
 
         {/* Tabs */}
@@ -270,9 +274,7 @@ const MyResume = () => {
                       <span className='text-3xl font-bold mr-2 text-primary group-hover:text-white transition-all duration-300 ease-in-out'>
                         {step.number}
                       </span>
-                      <h3 className='text-xl font-semibold'>
-                        {step.title}
-                      </h3>
+                      <h3 className='text-xl font-semibold'>{step.title}</h3>
                     </div>
                     <p className='text-sm text-gray-600 group-hover:text-white/90 transition-all duration-300 ease-in-out'>
                       {step.description}

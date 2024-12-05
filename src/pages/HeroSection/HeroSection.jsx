@@ -11,16 +11,21 @@ const HeroSection = () => {
             {/* Left Content */}
             <div className='lg:space-y-[140px] sm:space-y-[100px]'>
               <div className='space-y-[20px]'>
-                <div>
-                  <h2 className='text-gray-600 text-sm tracking-wider mb-4'>
-                    WELCOME TO MY WORLD
-                  </h2>
-                  <h1 className='text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4'>
-                    Hi, I'm <span className='text-primary'>S D'cruz</span>
-                  </h1>
-                  <h2 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold'>
-                    a <span className='text-gray-800'>Professional Coder.</span>
-                  </h2>
+                <div className='space-y-[20px]'>
+                  <div>
+                    <h2 className='text-gray-600 text-sm tracking-wider mb-4'>
+                      WELCOME TO MY WORLD
+                    </h2>
+                  </div>
+                  <div>
+                    <h1 className='text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4'>
+                      Hi, I'm <span className='text-primary'>S D'cruz</span>
+                    </h1>
+                    <h2 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold'>
+                      a{' '}
+                      <span className='text-gray-800'>Professional Coder.</span>
+                    </h2>
+                  </div>
                 </div>
                 <div>
                   <p className='text-gray-600 max-w-2xl leading-7'>
@@ -66,12 +71,20 @@ const HeroSection = () => {
                     BEST SKILL ON
                   </h3>
                   <div className='flex space-x-4'>
-                    {['https://rainbowit.net/html/inbio/assets/images/icons/icons-01.png', 'https://rainbowit.net/html/inbio/assets/images/icons/icons-02.png', 'https://rainbowit.net/html/inbio/assets/images/icons/icons-03.png'].map(skill => (
+                    {[
+                      'https://rainbowit.net/html/inbio/assets/images/icons/icons-01.png',
+                      'https://rainbowit.net/html/inbio/assets/images/icons/icons-02.png',
+                      'https://rainbowit.net/html/inbio/assets/images/icons/icons-03.png'
+                    ].map(skill => (
                       <div
-                      key={skill}
-                      className='p-4 bg-white rounded-lg shadow-white-3 hover:-translate-y-1 bg-gradient-box-w  transition-all duration-500'
+                        key={skill}
+                        className='p-4 bg-white rounded-lg shadow-white-3 hover:-translate-y-1 bg-gradient-box-w  transition-all duration-500'
                       >
-                        <img src={skill} alt='icon' className='h-6 w-6 object-scale-down' />
+                        <img
+                          src={skill}
+                          alt='icon'
+                          className='h-6 w-6 object-scale-down'
+                        />
                       </div>
                     ))}
                   </div>
