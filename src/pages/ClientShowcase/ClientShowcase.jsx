@@ -59,20 +59,23 @@ const ClientShowcase = () => {
         <h2 className='xs:text-[26px] sm:text-[34px] lg:text-[60px] font-bold leading-[1.2] my-0 text-[#3c3e41] '>
           Awesome Clients
         </h2>
-        <div className='grid md:grid-rows-3 sm:grid-rows-1 grid-flow-col gap-4'>
+        <div className='grid md:grid-rows-3 sm:grid-rows-1 grid-flow-col gap-4 xs:p-8 sm:p-7 md:p-0'>
           {/* Skills Card */}
-          <div className='col-span-full md!col-span-1 md:sticky md:top-[80px]'>
-            <div className='bg-white rounded-lg shadow-lg p-8 space-y-4'>
+          <div className='col-span-full lg:col-span-1 xl:sticky md:top-[80px]'>
+            <div className='bg-gradient-box-w rounded-lg shadow-lg text-center  '>
               {clients[0].skills.map((skill, index) => (
-                <div key={index} className='text-gray-600'>
+                <div
+                  key={index}
+                  className='text-gray-600 px-4 py-5 hover:bg-gradient-box-w hover:shadow-white-3 rounded-lg'
+                >
                   {skill}
                 </div>
               ))}
             </div>
           </div>
           {/* Client Cards */}
-          <div className='row-span-3 col-span-full md:col-span-3'>
-            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8'>
+          <div className='row-span-3 col-span-full md:col-span-3 '>
+            <div className='grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3  gap-8'>
               {clients.slice(1).map((client, index) => (
                 <div
                   key={index}

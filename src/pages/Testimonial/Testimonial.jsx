@@ -4,15 +4,17 @@ import Slider from '../../Components/Slider/Slider'
 const Testimonial = () => {
   return (
     <>
-    <div className='w-full max-w-6xl mx-auto xs:px-10 sm:px-10 md:px-20 py-16'>
-      <div className='text-center mb-12'>
-        <span className='text-pink-500 uppercase text-sm font-medium tracking-wider'>
-          WHAT CLIENTS SAY
-        </span>
-        <h2 className='text-4xl font-bold text-gray-800 mt-2'>Testimonial</h2>
+      <div className='w-full max-w-6xl mx-auto xs:px-10 sm:px-10 md:px-20 py-16'>
+        <div className='text-center mb-12'>
+          <p className='text-primary text-sm uppercase letterWordSpacing mb-2'>
+            WHAT CLIENTS SAY
+          </p>
+          <h2 className='xs:text-[26px] sm:text-[34px] lg:text-[60px] font-bold leading-[1.2] text-[#3c3e41]  mb-11 mb'>
+            Testimonial
+          </h2>
+        </div>
+        <Slider />
       </div>
-      <Slider />
-    </div>
     </>
   )
 }

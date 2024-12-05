@@ -105,7 +105,7 @@ const Slider = () => {
                   </div>
                 </div>
               </div>
-              <span className='absolute w-40 h-2 bg-gray-200 transform translate-x-[290px] -translate-y-44 z-0 md:hidden lg:block'></span>
+              <span className='absolute w-40 h-1 bg-gray-200 transform translate-x-[290px] -translate-y-44 z-0 md:hidden lg:block'></span>
               {/* Content Card */}
               <div className='z-10 rounded-lg shadow-white-3 bg-gradient-box-w w-[100%] p-6 md:p-8 relative '>
                 <div className='absolute -left-3 -top-24 md:hidden text-gray-200 hidden lg:block'>
