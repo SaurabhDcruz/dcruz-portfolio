@@ -70,20 +70,20 @@ const Slider = () => {
   }, [currentSlide])
 
   return (
-    <div className='relative overflow-hidden'>
+    <div className='relative overflow-hidden '>
     <div
       className='flex transition-transform duration-500 ease-in-out'
       style={{ transform: `translateX(-${currentSlide * 100}%)` }}
     >
       {testimonials.map((testimonial, index) => (
         <div key={testimonial.id} className='w-full flex-shrink-0 justify-center'>
-          <div className='grid md:grid-cols-[1fr,2.5fr] gap-10 items-center'>
+          <div className='grid md:grid-cols-[0.9fr,1.5fr] gap-10 items-center xs:p-5 sm:p-5 md:p-0'>
             {/* Profile Card */}
             <div
               key={index}
-              className='group relative bg-gradient-box-w rounded-lg overflow-hidden shadow-white-3 transition-shadow duration-300'
+              className='group relative bg-gradient-box-w shadow-white-3 rounded-lg overflow-hidden  transition-shadow duration-300'
             >
-              <div className='p-5'>
+              <div className='p-7'>
                 <div className='overflow-hidden rounded-md'>
                   <img
                     src={testimonial.image}
@@ -104,7 +104,7 @@ const Slider = () => {
             </div>
 
             {/* Content Card */}
-            <div className='rounded-lg shadow-white-3 bg-gradient-box-w w-[70%] p-6 md:p-8 relative '>
+            <div className='rounded-lg shadow-white-3 bg-gradient-box-w w-[100%] p-6 md:p-8 relative '>
               <div className='absolute -left-3 top-8 text-gray-200 hidden md:block'>
                 <svg
                   width='40'
