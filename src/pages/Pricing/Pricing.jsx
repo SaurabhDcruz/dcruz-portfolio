@@ -7,8 +7,8 @@ const Pricing = () => {
   const plans = ['static', 'standard', 'premium']
 
   return (
-    <div className='min-h-screen max-w-7xl mx-auto bg-gray-50 p-4  md:p-8'>
-      <div className='flex justify-between relative'>
+    <div className='min-h-[790px] max-w-7xl mx-auto bg-gray-50 p-4  md:p-8'>
+      <div className='lg:flex justify-between relative'>
         <div className='text-start mb-8 space-y-4'>
           <div>
             <p className='font-[400] text-sm uppercase text-primary letterWordSpacing'>
@@ -25,7 +25,7 @@ const Pricing = () => {
           <div className='bg-gradient-box-w shadow-shadow-white-3 rounded-2xl '>
             <div className='relative'>
               <div className='w-full bg-gradient-box-w rounded-xl  shadow-shadow-white-3 grid grid-cols-3'>
-                {plans.map((plan,index) => (
+                {plans.map((plan, index) => (
                   <div key={index}>
                     {plan == 'standard' ? (
                       <div className='tooltip'>
@@ -74,14 +74,14 @@ const Pricing = () => {
               </div>
             </div>
             <div className='p-12'>
-              <div className='flex justify-between items-start mb-6'>
-                <div>
+              <div className='sm:flex justify-between items-start mb-6'>
+                <div className='mb-2'>
                   <h2 className='text-2xl font-bold text-gray-800 mb-2'>
                     Design Make this Page
                   </h2>
                   <p className='text-gray-600'>Elementor</p>
                 </div>
-                <div className='bg-gradient-box-w shadow-white-3 rounded-lg p-3'>
+                <div className='bg-gradient-box-w text-center sm:text-start shadow-white-3 rounded-lg p-3'>
                   <span className='text-3xl font-bold text-primary'>
                     $50.00
                   </span>

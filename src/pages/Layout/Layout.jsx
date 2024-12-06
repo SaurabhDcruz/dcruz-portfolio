@@ -6,6 +6,8 @@ import ClientShowcase from '../ClientShowcase/ClientShowcase'
 import Header from './Header/Header'
 import Testimonial from '../Testimonial/Testimonial'
 import Pricing from '../Pricing/Pricing'
+import Blogs from '../Blogs/Blogs'
+import ContactUs from '../ContactUs/ContactUs'
 
 const Layout = () => {
   return (
@@ -28,6 +30,12 @@ const Layout = () => {
 
       {/* My Pricing */}
       <Pricing />
+
+      {/* My Blogs */}
+      <Blogs />
+
+      {/* Contact Us */}
+      <ContactUs />
     </div>
   )
 }
