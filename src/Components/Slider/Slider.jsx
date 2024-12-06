@@ -27,7 +27,7 @@ const testimonials = [
       'Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris mauris hendrerit ante. Ut tincidunt est ac dolor aliquam sodales phasellus smauris .'
   },
   {
-    id: 2,
+    id: 3,
     name: 'Jhonn Corner',
     title: 'Chief Officer US',
     company: 'RAINBOW-THEMES',
