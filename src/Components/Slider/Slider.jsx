@@ -27,7 +27,7 @@ const testimonials = [
       'Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris mauris hendrerit ante. Ut tincidunt est ac dolor aliquam sodales phasellus smauris .'
   },
   {
-    id: 2,
+    id: 3,
     name: 'Jhonn Corner',
     title: 'Chief Officer US',
     company: 'RAINBOW-THEMES',
@@ -70,7 +70,7 @@ const Slider = () => {
   }, [currentSlide])
 
   return (
-    <div className='relative overflow-hidden '>
+    <div className='relative overflow-hidden py-2 '>
       <div
         className='flex transition-transform duration-500 ease-in-out'
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -163,7 +163,6 @@ const Slider = () => {
           </button>
         </div>
       </div>
-
       {/* Pagination Dots */}
       <div className='flex justify-center gap-2 mt-6'>
         {testimonials.map((_, index) => (

@@ -93,12 +93,12 @@ const WhatIDo = () => {
           {services.map((service, index) => (
             <div className='group' key={index}>
               <div className='bg-gradient-box-w group-hover:bg-gradient-red-hover cursor-pointer xl:h-[300px] xl:w-[390px] p-6 rounded-lg shadow-white-3 transition-all duration-500 ease-in-out '>
-                <div className='group-hover:-translate-y-2 transition-all duration-500 space-y-3'>
+                <div className='group-hover:-translate-y-2 transition-all duration-500 space-y-3 p-4'>
                   <div className='text-[35px] text-primary group-hover:text-white transition-colors duration-300'>
                     {service.icon}
                   </div>
                   <div>
-                    <h3 className='text-xl font-semibold my-6 text-gray-900 group-hover:text-white transition-colors duration-300'>
+                    <h3 className='text-2xl font-[400] my-6 text-gray-900 group-hover:text-white transition-colors duration-300'>
                       {service.title}
                     </h3>
                   </div>
@@ -132,7 +132,7 @@ const WhatIDo = () => {
           {portfolio.map((item, index) => (
             <div
               key={index}
-              className='group relative bg-gradient-box-w rounded-lg overflow-hidden shadow-white-3 transition-shadow duration-300'
+              className='group relative bg-gradient-box-w rounded-lg overflow-hidden shadow-white-3 transition-shadow duration-300 p-4'
             >
               <div className='px-5 pt-5'>
                 <div className='aspect-w-16 aspect-h-9 overflow-hidden rounded-md'>
@@ -143,11 +143,15 @@ const WhatIDo = () => {
                   />
                 </div>
               </div>
-              <div className='p-4'>
-                <span className='text-primary text-sm'>{item.category}</span>
-                <h3 className='font-semibold mt-1 group-hover:text-primary-500 transition-colors duration-300'>
-                  {item.title}
-                </h3>
+              <div className='p-4 space-y-3'>
+                <div>
+                  <span className='text-primary text-sm uppercase'>{item.category}</span>
+                </div>
+                <div>
+                  <h3 className='font-[500] text-2xl mt-1 group-hover:text-primary-500 transition-colors duration-300'>
+                    {item.title}
+                  </h3>
+                </div>
               </div>
             </div>
           ))}

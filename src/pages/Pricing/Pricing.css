@@ -1,0 +1,26 @@
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltip-content {
+    @apply hidden absolute w-32 bg-gray-700 text-white text-center rounded-lg p-2;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.2s ease-in-out;
+}
+
+.tooltip:hover .tooltip-content {
+    @apply block opacity-100;
+}
+
+.tooltip .tooltip-content::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #4A5568 transparent transparent transparent;
+}
