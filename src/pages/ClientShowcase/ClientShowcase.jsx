@@ -60,9 +60,9 @@ const ClientShowcase = () => {
         <h2 className='xs:text-[26px] sm:text-[34px] lg:text-[60px] font-bold leading-[1.2] my-0 text-[#3c3e41] '>
           Awesome Clients
         </h2>
-        <div className='grid md:grid-rows-3 sm:grid-rows-1 grid-flow-col gap-12 xs:p-8 sm:p-7 md:p-0'>
+        <div className='md:flex items-start gap-9'>
           {/* Skills Card */}
-          <div className='col-span-full lg:col-span-1 xl:sticky md:top-[80px]'>
+          <div className=' md:top-[80px] mb-4 xs:mb-4 sm:mb-8 xs:w-[100%] sm:w-[100%]  md:w-[40%] ld:w-[30%]'>
             <div className='bg-gradient-box-w rounded-lg shadow-lg text-center p-1 '>
               {clients[0].skills.map((skill, index) => (
                 <div
@@ -79,7 +79,7 @@ const ClientShowcase = () => {
             </div>
           </div>
           {/* Client Cards */}
-          <div className='row-span-3 col-span-full md:col-span-1 '>
+          <div className='row-span-3  xs:w-[100%] sm:w-[100%]  lg:w-[70%] col-span-full md:col-span-1 '>
             <div className='grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8'>
               {clients.slice(1).map((client, index) => (
                 <div
@@ -93,8 +93,10 @@ const ClientShowcase = () => {
                       className='max-w-full max-h-full'
                     />
                   </div>
-                  <hr className='w-full'/>
-                  <p className='text-gray-600 text-center p-3 '>{client.name}</p>
+                  <hr className='w-full' />
+                  <p className='text-gray-600 text-center p-3 '>
+                    {client.name}
+                  </p>
                 </div>
               ))}
             </div>
