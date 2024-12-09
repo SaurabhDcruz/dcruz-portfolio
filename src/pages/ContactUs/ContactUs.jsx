@@ -2,8 +2,8 @@ import React from 'react'
 
 const ContactUs = () => {
   return (
-    <div className='min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
-      <div className='max-w-7xl mx-auto px-36'>
+    <div className='min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-4'>
+      <div className='max-w-7xl mx-auto px-2'>
         {/* Header */}
         <div className='text-center mb-12'>
           <p className='text-primary font-medium mb-2'>CONTACT</p>
@@ -13,7 +13,7 @@ const ContactUs = () => {
         </div>
 
         {/* Main Content */}
-        <div className='grid grid-cols-1 lg:grid-cols-[1.5fr,2fr] gap-9 mt-8'>
+        <div className='grid grid-cols-1 lg:grid-cols-[1.4fr,2fr] gap-12 mt-8'>
           {/* Left Column */}
           <div className='bg-gradient-box-w rounded-lg shadow-white-3 p-8'>
             <div className='aspect-w-16 aspect-h-9 mb-6'>
@@ -50,10 +50,10 @@ const ContactUs = () => {
               <div className='flex space-x-4'>
                 <a
                   href='#'
-                  className='p-3 bg-gradient-box-w shadow-shadow-white-3 rounded-lg hover:bg-gradient-red-hover transition-colors'
+                  className='p-3 group bg-gradient-box-w duration-500 hover:-translate-y-1 shadow-shadow-white-3 rounded-lg hover:bg-gradient-red-hover'
                 >
                   <svg
-                    className='w-5 h-5 text-gray-600'
+                    className='w-7 h-7 group-hover:text-white text-gray-600 transition-all duration-300'
                     fill='currentColor'
                     viewBox='0 0 24 24'
                   >
@@ -62,10 +62,10 @@ const ContactUs = () => {
                 </a>
                 <a
                   href='#'
-                  className='p-3 bg-gradient-box-w shadow-shadow-white-3 rounded-lg hover:bg-gradient-red-hover transition-colors'
+                  className='p-3 group bg-gradient-box-w duration-500 hover:-translate-y-1 shadow-shadow-white-3 rounded-lg hover:bg-gradient-red-hover'
                 >
                   <svg
-                    className='w-5 h-5 text-gray-600'
+                    className='w-7 h-7 group-hover:text-white text-gray-600 transition-all duration-300'
                     fill='currentColor'
                     viewBox='0 0 24 24'
                   >
@@ -74,10 +74,10 @@ const ContactUs = () => {
                 </a>
                 <a
                   href='#'
-                  className='p-3 bg-gradient-box-w shadow-shadow-white-3 rounded-lg hover:bg-gradient-red-hover transition-colors'
+                  className='p-3 group bg-gradient-box-w duration-500 hover:-translate-y-1 shadow-shadow-white-3 rounded-lg hover:bg-gradient-red-hover'
                 >
                   <svg
-                    className='w-5 h-5 text-gray-600'
+                    className='w-7 h-7 group-hover:text-white text-gray-600 transition-all duration-300'
                     fill='currentColor'
                     viewBox='0 0 24 24'
                   >
@@ -158,10 +158,10 @@ const ContactUs = () => {
                   className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none focus:border-transparent'
                 ></textarea>
               </div>
-              <div>
+              <div className='hover:-translate-y-1 duration-500 transition-all'>
                 <button
                   type='submit'
-                  className='w-full flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-lg text-white bg-pink-500 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary'
+                  className='w-full flex items-center transition-all duration-300 justify-center px-8 py-4  text-base font-medium rounded-lg text-primary bg-gradient-box-w shadow-shadow-gray hover:bg-gradient-red-hover hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary'
                 >
                   SEND MESSAGE
                   <svg

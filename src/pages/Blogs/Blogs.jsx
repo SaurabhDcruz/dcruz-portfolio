@@ -51,11 +51,11 @@ const Blogs = () => {
             <h1 className='xs:text-[26px] sm:text-[34px] lg:text-[60px] font-bold leading-[1.2] my-0 text-[#3c3e41]'>My Blog</h1>
           </div>
     
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-1">
             {posts.map((post, index) => (
               <div
                 key={index}
-                className="bg-gradient-box-w rounded-3xl shadow-lg overflow-hidden transition-transform duration-300 hover:translate-y-[-4px]"
+                className="bg-gradient-box-w rounded-3xl shadow-lg overflow-hidden transition-transform duration-500 hover:translate-y-[-4px]"
               >
                 <div className="overflow-hidden">
                   <img
